@@ -30,7 +30,7 @@ type Props = {
 }
 
 const getTurnSymbol = (turn: string): string => {
-    if (turn === TURN.X) return SYMBOLS.O;
+    if (turn === TURN.X) return SYMBOLS.X;
     return SYMBOLS.O;
 };
 
