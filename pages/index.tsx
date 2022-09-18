@@ -11,7 +11,7 @@ import { GAME_STATE, NEW_GAME, SYMBOLS, TURN } from '../util/constants';
 import * as GameLogic from '../util/gameLogic';
 
 const Page = styled.div`
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 
     display: flex;
@@ -23,13 +23,12 @@ const Page = styled.div`
     background-color: #fff;
 `;
 
-const Container = styled.main<{ width: string }>`
-    width: ${props => props.width ? props.width : '400px'};
+const Container = styled.main`
+    max-width: 400px;
 `;
 
 const Home: NextPage = () => {
 
-  const GAME_WIDTH = '400px';
   const [gameState, setGameState] = useState(GAME_STATE.IN_PROGRESS);
   const [boardValues, setBoardValues] = useState(NEW_GAME);
   const [currentTurn, setCurrentTurn] = useState(TURN.X);
@@ -60,9 +59,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Container width={GAME_WIDTH}>
+      <Container>
         <Headline />
-        <Board boardSize={GAME_WIDTH} boardValues={boardValues} gameState={gameState} squareClicked={squareClicked}/>
+        <Board boardValues={boardValues} gameState={gameState} squareClicked={squareClicked}/>
         <InfoBoard gameState={gameState} turn={currentTurn} resetGame={resetGame} />
       </Container>
     </Page>

@@ -5,9 +5,8 @@ import Cell from './cell';
 
 import { GAME_STATE } from '../util/constants';
 
-const Container = styled.div<{ size: string, gameState: string }>`
-    height: ${props => `${props.size}`};
-    width: ${props => `${props.size}`};
+const Container = styled.div<{ gameState: string }>`
+    aspect-ratio: 1 / 1;
     background-color: #000;
 
     display: grid;
@@ -20,16 +19,15 @@ const Container = styled.div<{ size: string, gameState: string }>`
 `;
 
 type Props = {
-    boardSize: string,
     gameState: string,
     boardValues: Array<string>,
     squareClicked: (index: number) => void
 }
 
-function Board({ boardSize, gameState, boardValues, squareClicked }: Props): React.ReactElement {
+function Board({ gameState, boardValues, squareClicked }: Props): React.ReactElement {
 
     return (
-        <Container size={boardSize} gameState={gameState}>
+        <Container gameState={gameState}>
             {boardValues.map((cell, index) => (
                 <Cell key={index} index={index} value={cell} squareClicked={squareClicked} />
             ))}
