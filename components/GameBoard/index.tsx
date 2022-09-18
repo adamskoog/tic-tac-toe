@@ -21,6 +21,11 @@ const Container = styled.section<{ gameState: string }>`
 
     cursor: ${props => props.gameState === GAME_STATE.IN_PROGRESS ? 'pointer' : 'default' };
     pointer-events: ${props => props.gameState === GAME_STATE.IN_PROGRESS ? 'unset' : 'none' };
+    
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+    outline: none !important;
 `;
 
 type Props = {
