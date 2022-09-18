@@ -1,11 +1,12 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { CELL_VALUES, SYMBOLS } from '../util/constants';
+import { Colors, Fonts } from '../util/globalStyle';
+import { CELL_VALUES, SYMBOLS } from '../../util/constants';
 
 const Container = styled.div<{ value: string }>`
-    color: #000;
-    background-color: #fff;
+    color: ${Colors.darkGreen};
+    background-color: ${Colors.cream};
     
     cursor: ${props => props.value === CELL_VALUES.EMPTY ? 'pointer' : 'default' };
     pointer-events: ${props => props.value === CELL_VALUES.EMPTY ? 'unset' : 'none' };

@@ -3,12 +3,17 @@ import styled from 'styled-components';
 
 import Cell from './cell';
 
-import { GAME_STATE } from '../util/constants';
+import { Fonts, Colors } from '../util/globalStyle';
+import { GAME_STATE } from '../../util/constants';
 
-const Container = styled.div<{ gameState: string }>`
+const Container = styled.section<{ gameState: string }>`
     aspect-ratio: 1 / 1;
-    background-color: #000;
+    background-color: ${Colors.darkGreen};
 
+    font-family: ${Fonts.CrystalRadioKit};
+    
+    width: 100%;
+    max-width: 400px;
     display: grid;
     grid-gap: 5px;
     grid-template-columns: repeat(3, 1fr);

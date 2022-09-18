@@ -1,6 +1,6 @@
 export const SYMBOLS = {
-    X: '❌',
-    O: '⭕'
+    X: 'X',
+    O: 'O'
 }
 
 export const TURN = {
@@ -15,9 +15,9 @@ export const CELL_VALUES = {
 };
 
 export const GAME_STATE = {
-    X: `${SYMBOLS.X} is the Winner!!`,
-    O: `${SYMBOLS.O} is the Winner!!`,
-    TIE: 'The match is a draw!',
+    X: `${SYMBOLS.X}`,
+    O: `${SYMBOLS.O}`,
+    TIE: 'draw',
     IN_PROGRESS: ''
 };
 
