@@ -1,8 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { Colors, Fonts } from '../util/globalStyle';
-import { CELL_VALUES, SYMBOLS } from '../../util/constants';
+import { Colors, Fonts } from '@/components/util/globalStyle';
+import { CELL_VALUES, SYMBOLS } from '@/util/constants';
 
 const Container = styled.div<{ value: string }>`
     color: ${Colors.darkGreen};

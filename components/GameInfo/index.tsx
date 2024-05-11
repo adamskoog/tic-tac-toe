@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { GAME_STATE, TURN, SYMBOLS } from '../../util/constants';
-import { Fonts, Colors } from '../util/globalStyle';
+import { GAME_STATE, TURN, SYMBOLS } from '@/util/constants';
+import { Fonts, Colors } from '@/components/util/globalStyle';
 
 const Container = styled.section`
     display: flex;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Fonts, Colors } from '../util/globalStyle';
+import { Fonts, Colors } from '@/components/util/globalStyle';
 
 const Container = styled.header`
     font-family: ${Fonts.CrystalRadioKit};

@@ -1,6 +1,8 @@
 {
   "name": "tic-tac-toe",
-  "version": "1.0.0",
+  "appTitle": "Tic-Tac-Toe",
+  "version": "1.1.0",
+  "repository": "https://github.com/adamskoog/tic-tac-toe",
   "private": true,
   "scripts": {
     "dev": "next dev",

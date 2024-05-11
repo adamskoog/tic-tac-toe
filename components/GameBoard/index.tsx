@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Cell from './cell';
+import Cell from '@/components/GameBoard/cell';
 
-import { Fonts, Colors } from '../util/globalStyle';
-import { GAME_STATE } from '../../util/constants';
+import { Fonts, Colors } from '@/components/util/globalStyle';
+import { GAME_STATE } from '@/util/constants';
 
 const Container = styled.section<{ $gameState: string }>`
     aspect-ratio: 1 / 1;
