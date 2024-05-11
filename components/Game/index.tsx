@@ -7,10 +7,10 @@ import { GlobalStyle, NormalizeGlobalStyle } from '@/components/util/globalStyle
 import Header from '@/components/Header';
 import GameInfo from '@/components/GameInfo';
 import GameBoard from '@/components/GameBoard';
+import Footer from '@/components/Footer';
 
 import { GAME_STATE, NEW_GAME, SYMBOLS, TURN } from '@/util/constants';
 import * as GameLogic from '@/util/gameLogic';
-import { Fonts, Colors } from '@/components/util/globalStyle';
 
 const GamePage = styled.div`
     width: 100%;
@@ -30,17 +30,6 @@ const Main = styled.main`
 
     flex-grow: 1;
 `;
-
-const Footer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  font-family: ${Fonts.CrystalRadioKit};
-  height: fit-content;
-  color: ${Colors.cream};
-  background-color: ${Colors.darkGreen};  
-  width: 100%;
-  padding: .5rem 1rem;
-`
 
 type GameProps = {
   version: string,
@@ -80,10 +69,7 @@ export default function Game({ version, repoUrl = null }: GameProps) {
           <GameInfo gameState={gameState} turn={currentTurn} resetGame={resetGame} />
           <GameBoard boardValues={boardValues} gameState={gameState} squareClicked={squareClicked}/>
         </Main>
-        <Footer>
-          <span>{`Version: ${version}`}</span>
-          {repoUrl && <span><a href={repoUrl} target='_blank'>View Source</a></span>}
-        </Footer>
+        <Footer version={version} repoUrl={repoUrl} />
       </GamePage>
     )
 }
