@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Fonts, Colors } from '@/components/util/globalStyle';
 
-const Footer = styled.div`
+const Footer = styled.footer`
   display: flex;
   justify-content: center;
   font-family: ${Fonts.CrystalRadioKit};
