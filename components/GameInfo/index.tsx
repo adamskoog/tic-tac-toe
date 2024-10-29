@@ -49,8 +49,10 @@ const getTurnSymbol = (turn: string): string => {
 function InfoBoard({ gameState, turn, resetGame }: Props): React.ReactElement {
 
     let GameText;
+    let buttonText = 'New Game';
     if (gameState === GAME_STATE.IN_PROGRESS) {
         GameText = <Text><span>{getTurnSymbol(turn)}</span>{`'s Turn`}</Text>;
+        buttonText = 'Reset';
     } else if (gameState === GAME_STATE.TIE) {
         GameText = <Text>The match is a <span>DRAW!!</span></Text>
     } else {
@@ -60,7 +62,7 @@ function InfoBoard({ gameState, turn, resetGame }: Props): React.ReactElement {
     return (
         <Container>
             {GameText}
-            <Button onClick={resetGame}>Reset</Button>
+            <Button onClick={resetGame}>{buttonText}</Button>
         </Container>
     );
 }
